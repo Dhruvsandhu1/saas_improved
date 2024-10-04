@@ -28,8 +28,8 @@ from dotenv import load_dotenv
 load_dotenv()
 output_summary=""
 #Getting the Hugging Face Token and GroqApiKey
-os.environ['HF_TOKEN']=os.getenv('HF_TOKEN')
-groq_api_key=os.getenv('GROQ_API_KEY')
+# os.environ['HF_TOKEN']=os.getenv('HF_TOKEN')
+groq_api_key=st.secrets['GROQ_API_KEY']
 embeddings=HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 
 #Setting up streamlit
